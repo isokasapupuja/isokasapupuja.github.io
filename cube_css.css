@@ -70,11 +70,9 @@ body:not(:hover) .cubewrapperwrapper{
 
 	margin: 0;
 	position: fixed;
-	/*justify-content: center;
-	align-items: center;*/
 
-
-	animation: pulseAnimation 348.837ms ease-out infinite;
+	--bpm: 172;
+	animation: pulseAnimation calc(1 / (var(--bpm) / 60) * 1000ms) ease-out infinite;
 }
 
 .cubespinZ{
