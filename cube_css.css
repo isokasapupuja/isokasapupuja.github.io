@@ -5,9 +5,17 @@ min-height: 100vh;
 /***** play bms ******/
 }
 
+.testi {
+	color: green;
+}
+
+/*************************
+*******brogle start*******
+**************************/
+
 body:not(:hover) .cubewrapperwrapper{
 	animation-name: screensaver;
-	animation-delay: 10s; /*time until screensaver activates*/
+	animation-delay: 1s; /*time until screensaver activates*/
 	animation-duration: 5s;
 	animation-fill-mode: forwards;
 }
@@ -17,14 +25,31 @@ body:not(:hover) .cubewrapperwrapper{
 	100% {top: 50vh;}
 }
 
-.testi {
+.cubewrapperwrapper::before {
 	color: green;
+	left: 4px;
+	position: fixed;
+	content: '踊ってるだけで退場\aそれをそっかそっかっていって\aお幸せについて討論\a何が正義なんかって思う\a生意気そうにガム噛んで\aそれもいいないいなって思う\aテレスコープ越しの感情\aロッカーに全部詰め込んだ\a踊ってない夜を知らない\a踊ってない夜が気に入らない\a踊ってない夜を知らない\a踊ってない夜が気に入らないよ\a気に入らない夜なんて もう僕は知らない\a踊ってない夜がない夜なんて\aとってもとっても退屈です\aほら踊ってる ダンスホールの未来に\a色を塗って生きるのは あなた あなた\a「ダンスは笑顔で待ってる」\a踊ってたい夜を知りたい (待ってる)\a踊ってたい夜を気に入りたい (ダンスは笑顔で待ってる)\a踊ってない夜を知りたい (待ってる)\a踊ってない夜が気に入らないよ (ダンスは笑顔で待ってる)\a気に入らない夜なんて もう僕は知らない (待ってる ダンスは笑顔で待ってる)\a踊ってない夜に泣いてるなんて (待ってる)\aとってもとっても退屈です (ダンスは笑顔で待ってる)\a踊ってたい夜が大切なんです\aとってもとってもとっても大切です\a';
+	white-space: pre;
+	animation: lyricsScroll 5s ease-in-out infinite;
+	animation-direction: alternate;
+}
+.cubewrapperwrapper::after {
+	color: green;
+	right: 4px;
+	float: right;
+	text-align: right;
+	position: fixed;
+	content: '踊ってるだけで退場\aそれをそっかそっかっていって\aお幸せについて討論\a何が正義なんかって思う\a生意気そうにガム噛んで\aそれもいいないいなって思う\aテレスコープ越しの感情\aロッカーに全部詰め込んだ\a踊ってない夜を知らない\a踊ってない夜が気に入らない\a踊ってない夜を知らない\a踊ってない夜が気に入らないよ\a気に入らない夜なんて もう僕は知らない\a踊ってない夜がない夜なんて\aとってもとっても退屈です\aほら踊ってる ダンスホールの未来に\a色を塗って生きるのは あなた あなた\a「ダンスは笑顔で待ってる」\a踊ってたい夜を知りたい (待ってる)\a踊ってたい夜を気に入りたい (ダンスは笑顔で待ってる)\a踊ってない夜を知りたい (待ってる)\a踊ってない夜が気に入らないよ (ダンスは笑顔で待ってる)\a気に入らない夜なんて もう僕は知らない (待ってる ダンスは笑顔で待ってる)\a踊ってない夜に泣いてるなんて (待ってる)\aとってもとっても退屈です (ダンスは笑顔で待ってる)\a踊ってたい夜が大切なんです\aとってもとってもとっても大切です\a';
+	white-space: pre;
+	animation: lyricsScroll 5s ease-in-out infinite;
+	animation-direction: alternate-reverse;
+}
+@keyframes lyricsScroll {
+	0% {transform: translateY(-40vh);}
+	100% {transform: translateY(-20vh);}
 }
 
-
-/*************************
-********cube start********
-**************************/
 .cubewrapperwrapper {
 	height: 100vh;
 	width: 100%;
@@ -128,5 +153,5 @@ body:not(:hover) .cubewrapperwrapper{
 	100% {transform: scale(1);}
 }
 /*************************
-*********cube end*********
+********brogle end********
 **************************/
