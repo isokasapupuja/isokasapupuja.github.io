@@ -5,6 +5,18 @@ min-height: 100vh;
 /***** play bms ******/
 }
 
+body:not(:hover) .cubewrapperwrapper{
+	animation-name: screensaver;
+	animation-delay: 10s; /*time until screensaver activates*/
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+}
+@keyframes screensaver {
+	0% {top: -10000vh;}
+	50% {top: 50vh;}
+	100% {top: 50vh;}
+}
+
 .testi {
 	color: green;
 }
@@ -18,7 +30,7 @@ min-height: 100vh;
 	width: 100%;
 	overflow: hidden;
 
-	top: 50vh;
+	top: -10000vh;
   position: fixed;
 }
 
