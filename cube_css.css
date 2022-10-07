@@ -102,9 +102,12 @@ body:not(:hover) .cubewrapperwrapper{
 	transform-style: preserve-3d;
 
 	background-image: url("brogle.png");
-	background-position: fixed center;
+	/*background-position: fixed center;*/
 	background-repeat: no-repeat;
   background-size: cover;
+
+	animation: brogleBgChangeAnimation calc(1 / (var(--bpm) / 60 / 4) * 1000ms) linear infinite;
+	animation-timing-function: steps(1);
 }
 
 .cube1 {
@@ -149,6 +152,14 @@ body:not(:hover) .cubewrapperwrapper{
 	0% {transform: scale(1);}
 	20% {transform: scale(1.5);}
 	100% {transform: scale(1);}
+}
+
+@keyframes brogleBgChangeAnimation {
+	0% {background-image: url("brogle.png");}
+	25% {background-image: url("brogle2.png");}
+	50% {background-image: url("brogle3.png");}
+	75% {background-image: url("brogle4.png");}
+	100% {background-image: url("brogle.png");}
 }
 /*************************
 ********brogle end********
